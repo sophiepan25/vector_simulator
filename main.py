@@ -34,12 +34,6 @@ on the graph.
 Clear Button:
 Clicking this button will reset the axes, the field back to 0,0, the mode back
 to graph mode, and delete all particles
-
-
-Grading Shortcuts:
-a: Enters the field <y, x>
-b: Enters the field <y + 2, x + y>
-c: Enters the field <x^2 + 1, y^2 + 1>
 '''
 
 class Arrow:
@@ -386,12 +380,6 @@ def onKeyPress(app, key):
         app.xCompStr = app.xTextBox.text
         app.field.xCompStr = app.xTextBox.text
         
-        
-    if key == 'c':
-        print(app.field.xCompStr, app.field.yCompStr)
-        for particle in app.particles:
-            print(particle.getGraphX(), particle.getGraphY(), particle.getDx(), particle.getDy())
-        
     if key == 'n':
         app.nextParticleColor = 'blue'
         app.nextParticleCharge = '-'
@@ -409,22 +397,6 @@ def onKeyPress(app, key):
             app.cols -= 2
         if app.yAxisSelected:
             app.rows -= 2
-            
-    #grading shortcuts
-    #can take in variables
-    if key == 'a':
-        app.field.xCompStr = 'y'
-        app.field.yCompStr = 'x'
-        
-    #can take in polynomials
-    elif key == 'b':
-        app.field.xCompStr = 'y + 2'
-        app.field.yCompStr = 'x + y'
-        
-    #can raise powers
-    elif key == 'c':
-        app.field.xCompStr = 'x^2 + 1'
-        app.field.yCompStr = 'y^2 + 1'
         
         
 
