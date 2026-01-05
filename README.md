@@ -48,8 +48,9 @@ cd backend
 python -m venv .venv
 source .venv/bin/activate
 pip install fastapi uvicorn
+```
 
-Run the API:
+## Run the API:
 
 python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 5000
 
@@ -71,7 +72,7 @@ Open:
 http://localhost:3001
 
 How to Use
-1. Set a Vector Field
+### 1. Set a Vector Field
 
 Examples (polynomial only):
 
@@ -81,13 +82,13 @@ x	y	Outward source
 -x	-y	Inward sink
 x	-y	Saddle
 x^2-y^2	2x	Nonlinear
-2. Add Particles
+### 2. Add Particles
 
 Position within bounds [-10, 10]
 
 Charge +1 or -1
 
-3. Control Simulation
+### 3. Control Simulation
 
 Step: advance by n × dt
 
@@ -95,7 +96,7 @@ Play / Pause: continuous stepping
 
 Reset: clear simulation
 
-Math Model
+### Math Model
 
 For each particle (x, y):
 
@@ -108,20 +109,10 @@ y += charge × dy × dt
 
 Particles leaving bounds are removed.
 
-Notes
+### Notes
 
 Expressions support: x, y, integers, + -, and ^ (exponent)
 
 Spaces are optional (y-x, 2x+3y-10 both valid)
 
 No trigonometric functions by design (polynomial-only)
-
-License
-
-MIT (or your preferred license)
-
-
-If you want, I can also:
-- shorten this further (one-screen README),
-- add GIF/demo instructions,
-- or rewrite it as a **teaching project README** (CS / physics oriented).
