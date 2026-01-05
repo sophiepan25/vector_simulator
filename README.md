@@ -33,9 +33,9 @@ vector_simulator/
 │ │ └── polynomial.py # Polynomial evaluator
 │ └── .venv/
 └── frontend/
-├── index.html
-├── styles.css
-└── app.js
+  ├── index.html
+  ├── styles.css
+  └── app.js
 ```
 
 
